@@ -8,6 +8,5 @@ matrix:
   fast_finish: true
 
 script:
-  - make server
-  - make curl
+  - make
   - exit 0

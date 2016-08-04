@@ -13,12 +13,12 @@
 
 .PHONY: build update test-all validate autoload test phpmd phpcs phpcpd phploc reset coveralls
 
-build: update
+build: server curl
 
 server:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Run built-in web-server \033[0m"
 	@chmod +x ./public_html/webserver.sh
-	@./public_html/webserver.sh "localhost" "8888" "`pwd`/public_html" "`pwd`/fakedir/fake-index.php" "--some=123 --other=123123 -v"
+	@./public_html/webserver.sh "localhost" "8888" "./public_html" "./fakedir/fake-index.php" "--some=123 --other=123123 -v"
 
 curl:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Check curl \033[0m"
