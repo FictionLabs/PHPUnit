@@ -12,4 +12,3 @@ script:
   - make server
   - make curl
   - ls -l ./build/
-  - exit 0
