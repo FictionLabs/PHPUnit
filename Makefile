@@ -17,8 +17,8 @@ build: update
 
 server:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Run built-in web-server \033[0m"
-	@chmod +x ./webserver.sh
-	@./webserver.sh "localhost" "8888" "./public_html" "./public_html/index.php" "--some=123 --other=123123 -v"
+	@chmod +x ./public_html/webserver.sh
+	@./public_html/webserver.sh "localhost" "8888" "`pwd`/public_html" "`pwd`/public_html/index.php" "--some=123 --other=123123 -v"
 
 curl:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Check curl \033[0m"
