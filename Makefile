@@ -13,7 +13,11 @@
 
 .PHONY: build update test-all validate autoload test phpmd phpcs phpcpd phploc reset coveralls
 
-build: server curl
+build: update server curl
+
+update:
+	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Update build \033[0m"
+	@composer update
 
 server:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Run built-in web-server \033[0m"

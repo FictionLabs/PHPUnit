@@ -13,6 +13,8 @@
  * @author    Denis Smetannikov <denis@jbzoo.com>
  */
 
+use JBZoo\PHPUnit\CovCatcher;
+
 // To help the built-in PHP dev server, check if the request was actually for
 // something which should probably be served as a static file
 if (PHP_SAPI == 'cli-server') {
@@ -28,9 +30,6 @@ if (PHP_SAPI == 'cli-server') {
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-/*
-
-use JBZoo\PHPUnit\CovCatcher;
 $catcher = new CovCatcher('test', array(
     'src'  => __DIR__ . '/../public_html',
     'xml'  => true,
@@ -38,8 +37,4 @@ $catcher = new CovCatcher('test', array(
     'cov'  => true,
 ));
 
-$catcher->includeFile();
-*/
-
-require_once __DIR__ . '/../public_html/index.php';
-
+$catcher->includeFile(__DIR__ . '/../public_html/index.php');

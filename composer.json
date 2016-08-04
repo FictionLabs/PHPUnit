@@ -1,5 +1,12 @@
 {
-    "require": {
-        "jbzoo/phpunit": "dev-feature/coverage-catcher"
+    "require"  : {
+        "jbzoo/data"                : "^1.4",
+        "jbzoo/utils"               : "^1.7",
+        "phpunit/php-code-coverage" : "@stable"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "JBZoo\\PHPUnit\\" : "src"
+        }
     }
 }
