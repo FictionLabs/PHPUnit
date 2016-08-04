@@ -13,6 +13,12 @@
 # @link      https://github.com/JBZoo/PHPUnit
 #
 
-ENV_VAR=42 php -S "localhost:8888" -t "./public_html" "./public_html/index.php" &
+echo $1;
+echo $2;
+echo $3;
+echo $4;
+echo $5;
+
+ENV_VAR=$5 php -S "$1:$2" -t "$3" "$4" &
 
 sleep 3s
