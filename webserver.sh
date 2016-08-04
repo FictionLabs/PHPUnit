@@ -19,6 +19,6 @@ echo $3;
 echo $4;
 echo $5;
 
-ENV_VAR=$5 php -S "$1:$2" -t "$3" "$4" &
+ENV_VAR="$5" php -S "$1:$2" -t "$3" "$4" &
 
 sleep 3s
