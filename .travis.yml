@@ -12,7 +12,6 @@ matrix:
   fast_finish: true
 
 script:
-  - chmod +x ./webserver.sh
-  - ./webserver.sh
-  - curl -S http://localhost:8888
+  - make server
+  - make curl
   - exit 0
