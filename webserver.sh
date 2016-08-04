@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 #
 # JBZoo PHPUnit
 #
@@ -11,9 +13,6 @@
 # @link      https://github.com/JBZoo/PHPUnit
 #
 
-RewriteEngine On
+ENV_VAR=42 php -S "localhost:8888" -t "./public_html" "./public_html/index.php" &
 
-RewriteBase /
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+) index.php [QSA,L]
+sleep 3s

@@ -13,4 +13,5 @@
  * @author    Denis Smetannikov <denis@jbzoo.com>
  */
 
+echo 'ENV_VAR: ' . getenv('ENV_VAR') . PHP_EOL;
 echo ' -= OK =-' . PHP_EOL;
