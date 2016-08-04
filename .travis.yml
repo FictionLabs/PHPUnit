@@ -8,6 +8,7 @@ matrix:
   fast_finish: true
 
 script:
+  - phpenv config-rm xdebug.ini
   - composer update
   - make server
   - make curl
