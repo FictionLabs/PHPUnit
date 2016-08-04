@@ -144,7 +144,7 @@ class CovCatcher
     {
         if (!$this->_isStart && $this->_coverage) {
             $this->_isStart = true;
-            //$this->_coverage->start($this->_hash, true);
+            $this->_coverage->start($this->_hash, true);
         }
     }
 
