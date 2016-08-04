@@ -12,6 +12,7 @@ matrix:
   fast_finish: true
 
 script:
-  - php -S localhost:8888 ./web-root/ &
+  - chmod +x ./web-root/webserver.sh
+  - ./web-root/webserver.sh
   - curl -S http://localhost:8888
   - exit 1
