@@ -8,5 +8,7 @@ matrix:
   fast_finish: true
 
 script:
-  - make
+  - make server
+  - make curl
+  - ls -l ./build/
   - exit 0

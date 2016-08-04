@@ -15,6 +15,8 @@
 
 // To help the built-in PHP dev server, check if the request was actually for
 // something which should probably be served as a static file
+use JBZoo\PHPUnit\CovCatcher;
+
 if (PHP_SAPI == 'cli-server') {
     $url  = parse_url($_SERVER['REQUEST_URI']);
     $file = realpath($_SERVER['DOCUMENT_ROOT'] . $url['path']);
@@ -23,4 +25,13 @@ if (PHP_SAPI == 'cli-server') {
     }
 }
 
-require_once __DIR__ . '/../public_html/index.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$catcher = new CovCatcher('test', array(
+    'src'  => __DIR__ . '/../public_html',
+    'xml'  => true,
+    'html' => true,
+    'cov'  => true,
+));
+
+$catcher->includeFile(__DIR__ . '/../public_html/index.php');

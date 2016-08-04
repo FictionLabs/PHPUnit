@@ -1,0 +1,5 @@
+{
+    "require": {
+        "jbzoo/phpunit": "dev-feature/coverage-catcher"
+    }
+}
