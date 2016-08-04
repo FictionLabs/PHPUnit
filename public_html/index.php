@@ -14,4 +14,4 @@
  */
 
 echo 'ENV_VAR: ' . getenv('ENV_VAR') . PHP_EOL;
-echo ' -= OK =-' . PHP_EOL;
+echo '-= OK #1 =-' . PHP_EOL;
