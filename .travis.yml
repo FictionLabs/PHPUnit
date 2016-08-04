@@ -13,6 +13,6 @@ matrix:
 
 script:
   - chmod +x ./webserver.sh
-  - ./web-root/webserver.sh
+  - ./webserver.sh
   - curl -S http://localhost:8888
   - exit 0
