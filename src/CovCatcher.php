@@ -164,6 +164,7 @@ class CovCatcher
      */
     protected function _createReports()
     {
+        return;
         if (!$this->_coverage) {
             return;
         }
