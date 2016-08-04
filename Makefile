@@ -23,3 +23,4 @@ server:
 curl:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Check curl \033[0m"
 	@curl -S http://localhost:8888
+	@curl -S http://localhost:8888/robots.txt
